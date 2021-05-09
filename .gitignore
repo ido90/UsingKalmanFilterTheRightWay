@@ -1,0 +1,11 @@
+__pycache__
+.ipynb_checkpoints/
+.idea/
+.git
+.github
+
+backup/
+data/
+others/
+notebooks/
+outputs/
