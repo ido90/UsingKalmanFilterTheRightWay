@@ -1177,8 +1177,8 @@ class NeuralKF(nn.Module, Trackers.Tracker):
         '''
         if H_from_z is None: H_from_z = self.estimate_R_from_HZ
         if polar is None: polar = self.polar_R
-        if not isinstance(Z, np.ndarray):
-            Z = np.array(Z)
+        if not isinstance(Z[0], np.ndarray):
+            Z = [np.array(z) for z in Z]
         if not isinstance(X[0], torch.Tensor):
             X = [torch.tensor(x) for x in X]
         Z = np.concatenate(Z, axis=0)
