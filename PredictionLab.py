@@ -891,7 +891,7 @@ def res_per_target(res, groupby='model', scores=('NLL','SE','AE'), separate_scen
     return res
 
 def multi_scenario_analysis(res, res_tar=None, scenarios=None, models=None, axs=None, axsize=(6,3.8),
-                            skip_t=1, hetro_models=None, savefig=None):
+                            skip_t=1, hetro_models=None, print_table=False, savefig=None):
     if scenarios is None: scenarios = res.scenario.unique()
     if models is None: models = res.model.unique()
     if hetro_models is None: hetro_models = np.any([m.startswith('O') for m in models]) and np.any([not m.startswith('O') for m in models])
@@ -906,6 +906,20 @@ def multi_scenario_analysis(res, res_tar=None, scenarios=None, models=None, axs=
     a += 1
     rmses, _ = show_res_map(res, 'SE', lambda x: np.sqrt(np.mean(x)), 'RMSE', axs[a], scenarios=scenarios, models=models)
     a += 1
+    
+    if print_table:
+        for tmp_data in (nlls, rmses):
+            for row,sc in zip(tmp_data,scenarios):
+                i0 = np.argmin(row)
+                print(sc, end='')
+                for i,el in enumerate(row):
+                    print(' & ', end='')
+                    if i == i0:
+                        print('{{\\bf {:.1f}\}}'.format(el), end='')
+                    else:
+                        print(f'{el:.1f}', end='')
+                print(r' \\')
+            print()
 
     if hetro_models:
         base_models = [m for m in models if not m.startswith('O')]
