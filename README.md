@@ -1,4 +1,4 @@
-# Noise Estimation Is Not Optimal: How To Use Kalman Filter The Right Way
+# Noise Estimation Is Not Optimal: How to Use Kalman Filter the Right Way
 
 This repo implements the experiments for the paper [Noise Estimation Is Not Optimal: How To Use Kalman Filter The Right Way](https://arxiv.org/abs/2104.02372) by Ido Greenberg, Shie Mannor and Netanel Yannay.
 
@@ -17,7 +17,7 @@ Using the tools in this repo or reconstructing the results of the paper can be d
 Note: since the anonymized version of the repo omits some of the notebooks, they are also available [here](https://drive.google.com/drive/folders/1I3rgOCxxzVg6lsIZB7EKl1WAi3cNSE-N?usp=sharing).
 
 ### Repo contents
-* A **simulation of aerial targets** (`ScenarioSimulator.py`, `TargetSimulator.py`, `BasicTargetSimulator.py`, `TargetSimulator.ipynb`) and a **Doppler Radar** (`SensorGenerator.py`, `RadarSimulator.ipynb`).
+* A **simulation of aerial targets** (`ScenarioSimulator.py`, `TargetSimulator.py`, `BasicTargetSimulator.py`, `TargetSimulator.ipynb`) and a **Doppler radar** (`SensorGenerator.py`, `RadarSimulator.ipynb`).
 * Implementation of **recurrent predictive models for tracking**, following the framework of Kalman Filter (`Trackers.py`, `NeuralTrackers.py`).
 * **Optimization** and analysis of the tracking models (`PredictionLab.py`).
 * Simulation and analysis of **multi-target tracking** (`TrackingLab.py`).
