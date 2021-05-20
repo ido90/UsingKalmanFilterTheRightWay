@@ -1,6 +1,8 @@
 # Noise Estimation Is Not Optimal: How to Use Kalman Filter the Right Way
 
-This repo implements the experiments for the paper [Noise Estimation Is Not Optimal: How To Use Kalman Filter The Right Way]() by Ido Greenberg, Shie Mannor and Netanel Yannay.
+This repo implements the experiments for the paper [Noise Estimation Is Not Optimal: How To Use Kalman Filter The Right Way]() by Ido Greenberg, Netanel Yannay and Shie Mannor.
+
+<img src="https://github.com/ido90/UsingKalmanFilterTheRightWay/blob/master/poster/Poster.png" width="960">
 
 ### Dependencies and instructions
 Dependencies: pytorch, numpy, pandas, matplotlib, seaborn.
