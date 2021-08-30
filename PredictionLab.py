@@ -804,13 +804,25 @@ def test_model(model, X, Y, scenarios_list=None, detailed=True, mse_after_pred=F
         MAE_tot /= count
         return tot_loss, NLL_tot, MSE_tot, MAE_tot
 
-def multi_scenario_test(scenarios, models_args, seeds=1, rf='KF', do_train=True, epochs=1, verbose=2):
+def multi_scenario_test(scenarios, models_args, seeds=1, rf='KF', do_train=True,
+                        epochs=1, min_iters=None, n_train=None, verbose=2):
     res = pd.DataFrame()
     for title in scenarios:
-        print(f'\n{title}')
         # load scenario
         Xtr, Ytr, tars_tr = load_data(fname=f'{title}_train')
         Xts, Yts, tars_tst = load_data(fname=f'{title}_test')
+        if n_train is not None:
+            if n_train > len(Xtr):
+                warn('n_train is larger than original dataset:', n_train, len(Xtr))
+            Xtr = Xtr[:n_train]
+            Ytr = Ytr[:n_train]
+            tars_tr = tars_tr[:n_train]
+            title = f'{title}_n{n_train:04d}'
+
+        print(f'\n{title}')
+
+        if min_iters is not None:
+            epochs = max(epochs, (10*min_iters)//len(Xtr))
 
         # train
         if do_train:
@@ -1032,6 +1044,7 @@ def show_res_map(res, score, mean=np.mean, lab=None, ax=None, scenarios=None, mo
     labs = np.array([[f'{s:.1f}' for s in row] for row in scores])
     sns.heatmap(rel_scores, annot=labs, cmap='RdYlGn', cbar=False, linewidths=0.3, fmt='', ax=ax)
     ax.set_xticklabels(models, rotation=90, fontsize=13)
+    ax.set_yticks(np.arange(len(scenarios)))
     ax.set_yticklabels(scenarios, rotation=0, fontsize=13)
     ax.set_title(lab, fontsize=15)
     return scores, ax

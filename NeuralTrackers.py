@@ -130,7 +130,7 @@ class NeuralKF(nn.Module, Trackers.Tracker):
         self.update_loss_p = loss_p      # train loss is location error in power of p
         self.update_loss_fac = update_loss_fac
         if self.update_loss_fac is None:
-            self.update_loss_fac = 1/50 if self.update_loss_p==2 else 0.5
+            self.update_loss_fac = 1  # old default: 1/50 if self.update_loss_p==2 else 0.5; decided to remove NLL by default for simplicity
         self.record_history = record     # T/F = T/F; None = record iff on eval state
         self.ng = n_gaussians            # number of gaussians to model in parallel
 
