@@ -10,9 +10,9 @@ Dependencies: pytorch, numpy, pandas, matplotlib, seaborn.
 Before the training the following directories should be created: `output/`, `data/models`, `data/train`, `data/XY`. If not created in advance, certain saving actions may fail and stop the whole training in the middle.
 
 Using the tools in this repo or reconstructing the results of the paper can be done by following the corresponding notebooks:
-* `Neural Kalman Filter.ipynb`: Neural KF (Section 3 in the paper) - training + evaluation + analysis.
 * `Optimized Kalman Filter.ipynb`: Optimized KF case study (Section 4) - training + evaluation + analysis.
-* `Paper Figures.ipynb`: Re-generation of exact figures from the paper.
+* `Neural Kalman Filter.ipynb`: Neural KF (Section 5 in the paper) - training + evaluation + analysis.
+* `Paper Figures.ipynb`: Re-generation of figures from the paper.
 * `OKF Training Example.ipynb`: A simple training example.
 * `Missing Detections.ipynb`: An example for training with missing detections.
 
