@@ -2,6 +2,8 @@
 
 This repo implements the experiments for the paper [Noise Estimation Is Not Optimal: How To Use Kalman Filter The Right Way]() by Ido Greenberg, Netanel Yannay and Shie Mannor.
 
+For a more compact implementation of the Optimized KF, see the corresponding [PyPI package](https://pypi.org/project/Optimized-Kalman-Filter/).
+
 <img src="https://github.com/ido90/UsingKalmanFilterTheRightWay/blob/master/poster/Poster.png" width="960">
 
 ### Dependencies and instructions
