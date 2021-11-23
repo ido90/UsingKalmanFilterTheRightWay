@@ -1,6 +1,6 @@
-# Noise Estimation Is Not Optimal: How to Use Kalman Filter the Right Way
+# Kalman Filter Is All You Need: Optimization Works When Noise Estimation Fails
 
-This repo implements the experiments for the paper [Noise Estimation Is Not Optimal: How To Use Kalman Filter The Right Way]() by Ido Greenberg, Netanel Yannay and Shie Mannor.
+This repo implements the experiments for the paper [Kalman Filter Is All You Need: Optimization Works When Noise Estimation Fails]() by Ido Greenberg, Netanel Yannay and Shie Mannor.
 
 For a more compact implementation of the Optimized KF, see the corresponding [PyPI package](https://pypi.org/project/Optimized-Kalman-Filter/).
 
