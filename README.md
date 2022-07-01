@@ -1,6 +1,6 @@
 # The Fragility of Noise Estimation in Kalman Filter: Optimization Can Handle Model-Misspecification
 
-This repo implements the experiments for the paper [The Fragility of Noise Estimation in Kalman Filter: Optimization Can Handle Model-Misspecification](https://arxiv.org/abs/2104.02372) by Ido Greenberg, Netanel Yannay and Shie Mannor.
+This repo implements the experiments for the paper [The Fragility of Noise Estimation in Kalman Filter: Optimization Can Handle Model-Misspecification](https://arxiv.org/abs/2104.02372) by Ido Greenberg, Shie Mannor and Netanel Yannay.
 
 For a more compact implementation of the Optimized KF, see the corresponding [PyPI package](https://pypi.org/project/Optimized-Kalman-Filter/).
 
