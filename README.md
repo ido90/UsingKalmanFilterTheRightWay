@@ -27,3 +27,13 @@ Using the tools in this repo or reconstructing the results of the paper can be d
 * Simulation and analysis of **multi-target tracking** (`TrackingLab.py`).
 * Implementation of models and tests for the additional domains of **tracking from video** (`MOT20/`, `OKF_MOT20.ipynb`) and **self-driving state-estimation from lidar measurements** (`Driving/`, `OKF_lidar.ipynb`).
 * Notebooks with **further results and examples** (see above).
+
+### Cite us
+```
+@article{greenberg2023okf,
+  title={Optimization or architecture: how to hack Kalman filtering},
+  author={Greenberg, Ido and Yannay, Netanel and Mannor, Shie},
+  journal={Advances in Neural Information Processing Systems},
+  year={2023}
+}
+```
