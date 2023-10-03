@@ -1,6 +1,6 @@
 # Optimization or Architecture: How to Hack Kalman Filtering
 
-This repo implements the experiments for the paper [Optimization or Architecture: How to Hack Kalman Filtering](https://arxiv.org/abs/2104.02372) by Ido Greenberg, Netanel Yannay and Shie Mannor.
+This repo implements the experiments for the paper [Optimization or Architecture: How to Hack Kalman Filtering](https://arxiv.org/abs/2310.00675) by Ido Greenberg, Netanel Yannay and Shie Mannor.
 
 See a separate repo for the [PyPI package](https://pypi.org/project/Optimized-Kalman-Filter/) of the Optimized KF (OKF).
 
